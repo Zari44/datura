@@ -10,6 +10,8 @@ def create_file(content: str):
         tmp_file.write(content)
         tmp_file.flush()
         yield tmp_file
+
+
 def test_word_count_returns_correct_values():
     content = """content"""
     with create_file(content) as tmp_file:
